@@ -7,7 +7,6 @@ import sys
 sys.setrecursionlimit(10000)
 
 def fazer_caminho(tamanho, tela):
-
 	x,y = tamanho
 	caminho = [[x*6-3, 3]]
 	lugares_visitados = [[x*6-3, 3]]
@@ -46,8 +45,6 @@ def fazer_caminho(tamanho, tela):
 			caminho.pop()
 	return caminho
 
-
-
 class move():
 
 	def esquerda(rgb, size, pos, id_jogador):
@@ -83,13 +80,11 @@ class move():
 		pygame.mouse.set_pos(pos[id_jogador][0])
 		return pos, jogou
 
-
 def posicionar_jogadores(tela, posicoes, size):
 	for p in posicoes.values():
 		cor = p[1]
 		x, y = p[0]
 		pygame.draw.rect(tela, cor, ((x-size/2+1, y-size/2+1),(size-1,size-1)))
-
 
 def verificar_vitoria(posicao, tamanho, size):
 	for ID, p in posicao.items():
@@ -97,7 +92,6 @@ def verificar_vitoria(posicao, tamanho, size):
 			return True
 
 	return False
-
 
 def gerar_labirinto(w = 10, h = 10):
     vis = [[0] * w + [1] for _ in range(h)] + [[1] * (w + 1)]
@@ -117,25 +111,20 @@ def gerar_labirinto(w = 10, h = 10):
 
     walk(randrange(w), randrange(h))
     linhas_colunas = [[],[]]
-    for (a, b) in zip(hor, ver):
-        # print(''.join(a + ['\n'] + b), flush=True)
+    for(a, b) in zip(hor, ver):
         for l in a:
-        	if l == "+--":
-        		linhas_colunas[0].append(1)
-        	elif l == "+":
-        		pass
-        	else:
-        		linhas_colunas[0].append(0)
+            if l == "+--":
+                linhas_colunas[0].append(1)
+            elif l == "++":
+                pass
+            else: 
+                linhas_colunas[0].append(0)
         if len(b) != 0:
-        	for c in b:
-	        	if "|" in c:
-	        		linhas_colunas[1].append(1)
-	        	else:
-	        		linhas_colunas[1].append(0)
-    
-    return linhas_colunas
-
-
+            for c in b:
+                if "|" in c:
+                    linhas_colunas[1].append(1)
+                else:
+                    linhas_colunas[1].append(0)
 
 def desenha_fim_pillow(tela, tamanho, size=11):
 	(x,y) = tamanho
@@ -146,9 +135,6 @@ def desenha_fim_pillow(tela, tamanho, size=11):
 	# pygame.draw.rect(tela,(48,163,221), inicio)
 	tela.rectangle((1,y*size-size+1,size-1,y*size-1), fill=(255,0,0), outline=(255,0,0))
 	# pygame.draw.rect(tela,(255,0,0), ponto)
-
-
-
 
 def desenhar_labirinto_pillow(img, tamanho, posicoes, size=11):
 	(x,y) = tamanho
@@ -168,10 +154,6 @@ def desenhar_labirinto_pillow(img, tamanho, posicoes, size=11):
 				pass
 		contX -= 1
 	desenha_fim_pillow(img, tamanho, size)
-
-
-
-
 
 def avancar(tela, jogadas, todas_jogadas, rgb, ultima_jogada, x, y):
 	j = jogadas[:]

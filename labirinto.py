@@ -17,7 +17,7 @@ try:
 	if on_off == 1:
 		exit()
 	# Conexão com o servidor ----------------------------
-	host = '10.0.10.184'
+	host = '192.168.0.229'
 	port = 4041
 
 	print('Conectando com o servidor...')
@@ -28,7 +28,6 @@ try:
 	s.send(pickle.dumps({"tipo":"jogador"}))
 	payload = pickle.loads(s.recv(200))["payload"]
 	a = s.recv(payload[0]*3)
-	# print(a)
 	inf = pickle.loads(a)
 	id_jogador, size, tamanho, desenho_lab, posicoes, img_code = inf.values()
 	img_code = base64.decodebytes(img_code)

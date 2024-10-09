@@ -7,6 +7,8 @@ import pickle
 from time import sleep
 import random
 
+
+
 host = ''
 port = 4041
 
