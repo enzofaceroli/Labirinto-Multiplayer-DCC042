@@ -9,9 +9,9 @@
 <p>pip install -r requirements.txt</p>
 <h2>Rodando o projeto:</h2>
 <p>1) Executar o comando 'ipconfig' no cmd</p>
-<p>2) Copiar o endereço ipv4 e substituir nas variável 'host' nos arquivos 'servidor.py' e 'labirinto.py'</p>
+<p>2) Copiar o endereço ipv4 e substituir nas variável 'host' nos arquivo'labirinto.py'</p>
 <p>3) Executar<br>&nbsp&nbsp&nbsp&nbsp
-    - python.gerar_labirinto.py<br>&nbsp&nbsp&nbsp&nbsp
-    - python.labirinto.py</p>
-<p>4) Após o 'hello', digitar 0 e pressionar a tecla enter</p>
+    - python servidor.py em um CMD<br>&nbsp&nbsp&nbsp&nbsp
+    - python labirinto.py em outros (um ou vários)</p>
+<p>4) No(s) CMD(s) rodando 'labirinto.py' digitar 0 e pressionar a tecla enter</p>
 <p>5) Aguardar o jogo abrir. Após abrir, o projeto já estará em execução</p>
