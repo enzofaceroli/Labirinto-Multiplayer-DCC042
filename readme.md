@@ -9,7 +9,7 @@
 <p>pip install -r requirements.txt</p>
 <h2>Rodando o projeto:</h2>
 <p>1) Executar o comando 'ipconfig' no cmd</p>
-<p>2) Copiar o endereço ipv4 e substituir nas variável 'host' nos arquivo'labirinto.py'</p>
+<p>2) Copiar o endereço ipv4 e substituir nas variável 'host' nos arquivo 'labirinto.py'</p>
 <p>3) Executar<br>&nbsp&nbsp&nbsp&nbsp
     - python servidor.py em um CMD<br>&nbsp&nbsp&nbsp&nbsp
     - python labirinto.py em outros (um ou vários)</p>
